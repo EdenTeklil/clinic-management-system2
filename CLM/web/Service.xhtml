@@ -81,13 +81,15 @@
                 .ser{
                     width: 20%;
                     height: 300px;
-                    display: flex;
+                    border:solid;
+                    border-color:lightblue;
                     background-color: #BFE6EC;
                     opacity: 0.6;
                     margin-left: 10px;
                 }
                 .ser:hover{
                     opacity: 0.9;
+                    box-shadow: 4px 4px;
                 }
                 .cla{
                     display: flex;
@@ -106,6 +108,23 @@
                 .container{
                     margin: 20px 50px;
                 }
+                .logo{
+                  width:50px;
+                  height: 50px;
+                    
+                    
+                    
+                }
+                .im{
+                  width: 30%;
+                  height: 30%;
+                  display: block;
+                    
+                }
+                .index{
+                    font-style: italic;
+                }
+            
         </style>
     </h:head>
     <div class="bodys">
@@ -118,7 +137,7 @@
                  <h3 class="logo">Vivo Clinic</h3>
                 <li>  <a  href="#home">Home</a></li>
                 <li> <a id="home" href="Service.xhtml">Service</a></li>
-                <li> <a href="#doctors">Doctors</a></li>
+                <li> <a href="Doctors.xhtml">Doctors</a></li>
                 <li> <a href="#about">About</a></li>
                 <li> <a href="#review">Login</a></li>
                </ul>
@@ -128,19 +147,48 @@
         <div class="container">
                     <div class="cla">
                  <div class="ser">
-            <p> health promotion</p>
+                     <div class="logo"></div>
+                      <img class="im" src="health.png" alt="alt"/>
+            <h4> health promotion</h4>
+            <div class="index">
             
-        </div>
+            <p>Helping People Who Smoke Quit.
+                Increasing Access to Healthy Foods and Physical Activity.
+                Preventing Excessive Alcohol Use.
+                Promoting Lifestyle Change and Disease Management.</p>
+            </div>
+                 </div>             
+        
         <div class="ser">
-            <p>disease prevention</p>
+            <div class="logo"></div>
+         <img class="im" src="disease-prevention.png" alt="alt"/>
+            <h4>disease prevention</h4>
+            <div class="index">
+            <p>Get Regular Physical Activity. ...
+               Avoid Drinking Too Much Alcohol. ...
+               Get Screened. ...
+               Get Enough Sleep.
+             </p>
+            </div>  
         </div>
         
         <div class="ser">
-            <p>diagnosis and treatment</p>
-            
+            <div class="logo"></div>
+            <img class="im" src="stethoscope.png" alt="alt"/>
+            <h4>diagnosis and treatment</h4>
+            <div class="index">
+            <p>Arrhythmia. ...
+              Arthritis. ...
+             Chronic kidney disease (CKD) ...
+             Diabetes.</p>
+            </div>
         </div>
         <div class="ser">
-            <p>rehabilitation</p>
+            <div class="logo"></div>
+           <img class="im" src="rehabilitation.png" alt="alt"/>
+            <h4>rehabilitation</h4>
+            
+              
         </div>
                         </div>
            
@@ -149,19 +197,55 @@
        <div class="claa">
                             
          <div class="ser">
-        <p>Laboratory services.</p>
+             <div class="logo"></div>
+             <img class="im" src="labratory.png" alt="alt"/>
+        <h4>Laboratory services.</h4>
+        <div class="index">
+        <p>No Food or Drink.
+           Wear Your PPE and Proper Lab Attire.
+           Good Hygiene.
+            Use Proper Storage Containers.
+            Label Your Work Space.</p>
+        </div>     
         </div>
         
         <div class="ser">
-            <p>Blood services.</p>
+            <div class="logo"></div>
+            <img class="im" src="blood.png" alt="alt"/>
+            <h4>Blood services.</h4>
+            <div class="index">
+            <p>Whole Blood Donation.
+            Power Red Donation
+            Platelet Donation. ...
+            Plasma Donation</p> 
+            </div>
         </div>
         
         <div class="ser">
-            <p>Emergency room services.</p>
+            <div class="logo"></div>
+            <img class="im" src="emergency.png" alt="alt"/>
+            <h4>Emergency room services.</h4>
+            <div class="index">
+            <p>Bleeding.
+               Breathing difficulties.
+                Someone collapses.
+                Fit and/or epileptic seizure.
+                Severe pain.
+                Heart attack.
+                A stroke.</p>
+            </div>
         </div>  
         
        <div class="ser">
-            <p>Pregnancy testing.</p>
+           <div class="logo"></div>
+          <img class="im" src="pregnancy-test.png" alt="alt"/>
+            <h4>Pregnancy testing.</h4>
+            <div class="index">
+            <p>Alpha-fetoprotein (AFP) test or multiple marker test.
+               Amniocentesis.
+               Chorionic villus sampling.
+               Cell-free fetal DNA testing.</p>
+            </div> 
         </div>              
                             
            </div>
