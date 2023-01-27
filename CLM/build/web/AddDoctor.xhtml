@@ -92,7 +92,7 @@
                     border-style: solid;
                 }
                
-                .label input[type="text"]{
+                .label input[type="text"],input[type="password"]{
                     border: none;
                     border-bottom: 1px solid #fff;
                     background: transparent;
@@ -175,6 +175,9 @@
                         </div>
                         <div class="la">
                             Email: <h:inputText value="#{addDoctor.email}"/>
+                        </div>
+                         <div class="la">
+                             Password: <h:inputSecret value="#{addDoctor.password}"/>
                         </div>
                         
                            <div class= "link">

@@ -28,9 +28,12 @@ public class DeleteDoctor {
     }
      public void method() throws SQLException, ClassNotFoundException{
         String sql="DELETE FROM DOCTOR WHERE id='"+id+"'";
+        String sql2="DELETE FROM LOGIN WHERE id='"+id+"'";
+
         Statement st;
         st=DbConnection.conMethod().createStatement();
         st.executeQuery(sql);
+        st.executeQuery(sql2);
 
 }
-}//DELETE FROM DOCTOR WHERE id='gnhmj'
+}

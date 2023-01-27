@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
         <style>
@@ -77,6 +78,21 @@
                     position: absolute;
                     left: 20px;
                 }
+                table {  
+                 border-collapse: collapse;  
+                width: 100%;  
+                  }  
+                th, td {  
+                        text-align: left;  
+                        padding: 8px;  
+                    }  
+  
+                tr:nth-child(even){background-color: #f2f2f2}  
+               th {  
+                  background-color: black;  
+                  color: white;  
+                 }  
+
                        </style>
     </h:head>
    
@@ -97,6 +113,105 @@
                </ul>
            
          </div>
+        
+        
+        
+         <h:body>  
+<h2><h:outputText value="DOCTOR LIST"></h:outputText></h2>  
+<h:dataTable value="#{viewD.viewList}" var="p">  
+<h:column>  
+<f:facet name="header">ID</f:facet>  
+<h:outputText value="#{p.id}"/>  
+</h:column>  
+<h:column>  
+        <f:facet name="header">Name</f:facet>  
+        <h:outputText value="#{p.roomNo}"/>  
+</h:column>  
+<h:column>  
+        <f:facet name="header">Department</f:facet>  
+<h:outputText value="#{p.department}"/> 
+</h:column>
+    <h:column> 
+        <f:facet name="header">FirstName</f:facet>  
+<h:outputText value="#{p.firstName}"/>
+</h:column>
+      <h:column> 
+          
+        <f:facet name="header">LastName</f:facet>  
+<h:outputText value="#{p.lastName}"/>
+</h:column>
+    <h:column> 
+        <f:facet name="header">DateofBirth</f:facet>  
+<h:outputText value="#{p.dateofBirth}"/> 
+
+</h:column>
+    <h:column> 
+<f:facet name="header">Age</f:facet>  
+<h:outputText value="#{p.age}"/> 
+\
+</h:column>
+    <h:column> 
+<f:facet name="header">Gender</f:facet>  
+<h:outputText value="#{p.gender}"/> 
+</h:column>
+    <h:column> 
+<f:facet name="header">ContactNo</f:facet>  
+<h:outputText value="#{p.contactNo}"/> 
+</h:column>
+    <h:column> 
+<f:facet name="header">Address</f:facet>  
+<h:outputText value="#{p.address}"/>  
+
+</h:column>
+    <h:column> 
+<f:facet name="header">BloodGroup</f:facet>  
+<h:outputText value="#{p.bloodGroup}"/>  
+
+</h:column>
+    <h:column> 
+<f:facet name="header">Email</f:facet>  
+<h:outputText value="#{p.email}"/>
+
+</h:column>
+
+    </h:dataTable>  
+</h:body>  
+        
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     </h:body>
     
 </html>

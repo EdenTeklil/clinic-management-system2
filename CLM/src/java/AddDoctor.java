@@ -26,6 +26,7 @@ public class AddDoctor {
     private String address;
     private String bloodGroup;
     private String email;
+    private String password;
     public AddDoctor(){
     }  
 
@@ -125,12 +126,23 @@ public class AddDoctor {
         this.email = email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+
     
       public void method() throws SQLException, ClassNotFoundException{
         String sql="Insert into DOCTOR(ID,ROOMNO,DEPARTMENT,FIRSTNAME,LASTNAME,DATEOFBIRTH,AGE,GENDER,CONTACT_NO,ADDRESS,BLOODGROUP,EMAIL) values ('"+id+"','"+roomNo+"','"+department+"','"+firstName+"','"+lastName+"','"+dateofBirth+"','"+age+"','"+gender+"','"+contactNo+"','"+address+"','"+bloodGroup+"','"+email+"')";
+        String sql2="Insert into LOGIN(ID,PASSWORD,ROLE) values ('"+id+"','"+password+"','Doctor')";
         Statement st;
         st=DbConnection.conMethod().createStatement();
         st.executeQuery(sql);
+        st.executeQuery(sql2);
         
     }
 

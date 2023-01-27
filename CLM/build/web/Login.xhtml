@@ -150,10 +150,10 @@
            
             <ul>
                  <h3 class="logo">Vivo Clinic</h3>
-                <li>  <a  href="#home">Home</a></li>
+                <li>  <a  href="index.xhtml">Home</a></li>
                 <li> <a  href="Service.xhtml">Service</a></li>
-                <li> <a  href="#doctors">Doctors</a></li>
-                <li> <a href="#about">About</a></li>
+                <li> <a  href="Doctors.xhtml">Doctors</a></li>
+                <li> <a href="About.xhtml">About</a></li>
                 <li> <a id="home" href="Login.xhtml">Login</a></li>
                </ul>
            
@@ -165,13 +165,13 @@
             <h1>log in here</h1>
             <form><h:form>  
 
-                <p>Username</p>
-                 <h:inputText > </h:inputText>  
+                <p>Id</p>
+                 <h:inputText value="#{login.id}" />  
                 
                 
                 <p>Password</p>
-                                 <h:inputText > </h:inputText>  
-                                  <h:commandButton value="Login" />
+                <h:inputSecret value="#{login.password}" />  
+                <h:commandButton value="Login" action="#{login.method()}" />
                     
                 </h:form>     
  
