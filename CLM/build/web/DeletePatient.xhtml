@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+        <h:head>
+        <title>Facelet Title</title>
+           <style>
+            
+         body{
+                background-color: lightblue;
+                background-image: url("doco.jpg");
+                background-size: 100%;
+                margin: 0;
+                
+            }
+            .head{
+                padding:3rem;
+                position:fixed;
+                top:0;left:0;right:0;
+                box-shadow: 0 1.5rem rgba(0,0,0,.1 );
+                display: flex;
+                align-items: center;
+                background-color: #fff;
+            }
+              
+                    .nav ul{
+                        list-style: none;
+                        background:#000000;
+                        padding: 0;
+                        margin: 0;
+                        text-align: right;
+                    }
+                    .nav li{
+                        display:inline-block;
+                    }
+                    .nav a{
+                    text-decoration: none;
+                    text-align: center;
+                    width: 100px;
+                    display: block;
+                    color: white;
+                    padding: 25px 20px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-family: arial;
+                    }
+                    
+                    
+                    
+                    
+                    
+                    
+                   .nav a:hover{
+                   
+                    background-color:#FFFFFF;
+                    color: #000;                    
+                    
+
+                }    
+                
+               
+                
+                 .ar{
+                      text-decoration: none;
+                    background-color:black;
+                    display: inline-block;
+                    padding: 20px 25px;
+                    color: white;
+ 
+                }
+                #home{
+                    background-color: white;
+                    color: black;
+                }
+                .logo{
+                    display: inline-block;
+                    color: #fff;
+                    position: absolute;
+                    left: 20px;
+                }
+                 .label{
+                    width:45%;
+                    height: 700px;
+                    background-color: rgba(255,255,255,0);
+                    color: #fff;
+                    margin: 20px auto;
+                    position: relative;
+                    box-sizing: border-box;
+                    padding: 70px 30px;
+                    margin-left: 25%;
+                      border-style: solid;
+                }
+               
+                .label input[type="text"]{
+                    border: none;
+                    border-bottom: 1px solid #fff;
+                    background: transparent;
+                    outline: none;
+                    height: 40px;
+                    color: black;
+                    font-size: 16px;
+                }
+                    .label link{
+                         position: absolute;
+                        margin-right:50%;
+                        font-size: 20%;
+                        background-color: black;
+                        
+                    }
+                      .Buttons{
+               position: absolute;
+               margin-top: 20px;
+               left: 250px;
+            }
+                       </style>
+    </h:head>
+    <h:body>
+           <div class="nav">
+           
+            <ul>
+                 <h3 class="logo">Vivo Clinic</h3>
+                  <li>  <a  href="ViewDoctor.xhtml">View Doctor</a></li>
+                <li> <a href="DeleteDoctor.xhtml">Delete Doctor</a></li>
+                <li> <a href="AddDoctor.xhtml">Add Doctor</a></li>
+                <li>  <a  href="AdminPage.xhtml">View Patient</a></li>
+                <li> <a href="UpdatePatient.xhtml">Update Patient</a></li>
+                <li> <a  href="AddPatient.xhtml">Add Patient</a></li>
+                <li> <a id="home" href="DeletePatient.xhtml">Delete Patient</a></li>
+                
+               </ul>
+           </div>
+               
+              
+                   <h:form>
+                       <div class="label">
+                        <div class="la">
+                            ID: <h:inputText value="#{deletePatient.id}" />
+                        </div>
+                               <div class= "link">
+                                   <h:commandButton class="Buttons"  value="DELETE" action="#{deletePatient.method()}"/>    
+                           </div>
+                       </div>
+                       
+                       
+                   </h:form>
+                   
+                 
+                  
+                   
+                   
+                   
+         
+
+    </h:body>
+</html>

@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/src/java/AddPatient.java</file>
             <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/web/index.xhtml</file>
-            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/web/Service.xhtml</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/web/AddPatient.xhtml</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/src/java/DbConnection.java</file>
         </group>
     </open-files>
 </project-private>

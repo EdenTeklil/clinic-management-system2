@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+     <h:head>
+        <title>eden clinic</title>
+        <style>
+            
+            .bodys{
+                background-color: lightblue;
+                background-image: url("doco.jpg");
+                background-size: 100%;
+                margin: 0;
+                height: 800px;
+            }
+            .head{
+                padding:3rem;
+                position:fixed;
+                top:0;left:0;right:0;
+                box-shadow: 0 1.5rem rgba(0,0,0,.1 );
+                display: flex;
+                align-items: center;
+                background-color: #fff;
+            }
+              
+                    .nav ul{
+                        list-style: none;
+                        background:#000000;
+                        padding: 0;
+                        margin: 0;
+                        text-align: right;
+                    }
+                    .nav li{
+                        display:inline-block;
+                    }
+                    .nav a{
+                    text-decoration: none;
+                    text-align: center;
+                    width: 100px;
+                    display: block;
+                    color: white;
+                    padding: 25px 20px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-family: arial;
+                    }
+                    
+                    
+                    
+                    
+                    
+                    
+                   .nav a:hover{
+                   
+                    background-color:#FFFFFF;
+                    color: #000;                    
+                    
+
+                }    
+                
+               
+                
+                 .ar{
+                      text-decoration: none;
+                    background-color:black;
+                    display: inline-block;
+                    padding: 20px 25px;
+                    color: white;
+ 
+                }
+                #home{
+                    background-color: white;
+                    color: black;
+                }
+                .logo{
+                    display: inline-block;
+                    color: #fff;
+                    position: absolute;
+                    left: 20px;
+                }
+                .login{
+                    width:320px;
+                    height: 420px;
+                    background: linear-gradient(120deg,#2980b9,#8e44ad);
+                    color: #fff;
+                    top:50%;
+                    left:50%;
+                    position: absolute;
+                    transform: translate(-50%,-50%);
+                    box-sizing: border-box;
+                    padding: 70px 30px;
+                }
+                .log{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top:-50px;
+                    left:calc(50% ,-50px);
+                    
+                }
+                h1{
+                    margin: 0;
+                    padding: 0 0 20px;
+                    text-align: center;
+                    font-size: 28px;
+                }
+                
+                .login p{
+                    margin: 0;
+                    padding: 0;
+                    font-weight: bold;
+                }   
+                
+                .login input{
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                .login input[type="text"],input[type="password"]{
+                    border: none;
+                    border-bottom: 1px solid #fff;
+                    background: transparent;
+                    outline: none;
+                    height: 40px;
+                    color: #fff;
+                    font-size: 16px;
+                }
+                .login input[type="submit"]{
+                    border: none;
+                    outline: none;
+                    height: 40px;
+                    background-color: black;
+                    color: #fff;
+                    font-size: 18px;
+                    border-radius: 20px;
+                }
+                .login input[type="submit"]:hover{
+                    cursor: pointer;
+                    background: lightblue;
+                    color: white;
+                }   
+                
+        </style>
+    </h:head>
+    <div class="bodys">
+
+    <h:body >
+        
+        <div class="nav">
+           
+            <ul>
+                 <h3 class="logo">Vivo Clinic</h3>
+                <li>  <a  href="#home">Home</a></li>
+                <li> <a  href="Service.xhtml">Service</a></li>
+                <li> <a  href="#doctors">Doctors</a></li>
+                <li> <a href="#about">About</a></li>
+                <li> <a id="home" href="Login.xhtml">Login</a></li>
+               </ul>
+           
+                </div>
+       
+        
+        <div class="login">
+            <img class="log" src="login.png" alt="alt"/>
+            <h1>log in here</h1>
+            <form><h:form>  
+
+                <p>Username</p>
+                 <h:inputText > </h:inputText>  
+                
+                
+                <p>Password</p>
+                                 <h:inputText > </h:inputText>  
+                                  <h:commandButton value="Login" />
+                    
+                </h:form>     
+ 
+ 
+
+            </form>
+            
+        </div>          
+           
+                        
+      
+        
+        
+        
+        
+        
+         
+        
+    </h:body>
+        </div>
+</html>
+
+
+
+
