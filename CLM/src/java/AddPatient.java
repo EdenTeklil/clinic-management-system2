@@ -1,4 +1,5 @@
 
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.faces.bean.ManagedBean;
@@ -14,7 +15,7 @@ import javax.faces.bean.ManagedBean;
  */
 @ManagedBean
 public class AddPatient {
-    private String id;
+    private String patientId;
     private String roomNo;
     private String department;
     private String firstName;
@@ -25,20 +26,24 @@ public class AddPatient {
     private String contactNo;
     private String address;
     private String bloodGroup;
-    private String concernDoctor;
+    private String id;
     private String  disease;      
     public AddPatient(){
         
         
     }
 
-    public String getId() {
-        return id;
+    public String getPatientId() {
+        return patientId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
     }
+
+    
+
+    
 
     public String getRoomNo() {
         return roomNo;
@@ -120,13 +125,15 @@ public class AddPatient {
         this.bloodGroup = bloodGroup;
     }
 
-    public String getConcernDoctor() {
-        return concernDoctor;
+    public String getId() {
+        return id;
     }
 
-    public void setConcernDoctor(String concernDoctor) {
-        this.concernDoctor = concernDoctor;
+    public void setId(String id) {
+        this.id = id;
     }
+
+ 
 
     public String getDisease() {
         return disease;
@@ -140,11 +147,23 @@ public class AddPatient {
    
 
      public void method() throws SQLException, ClassNotFoundException{
-        String sql="Insert into PATIENT(ID,ROOMNO,DEPARTMENT,FIRSTNAME,LASTNAME,DATEOFBIRTH,AGE,GENDER,CONTACT_NO,ADDRESS,BLOODGROUP,CONCERNDOCTOR,DISEASE) values ('"+id+"','"+roomNo+"','"+department+"','"+firstName+"','"+lastName+"','"+dateofBirth+"','"+age+"','"+gender+"','"+contactNo+"','"+address+"','"+bloodGroup+"','"+concernDoctor+"','"+disease+"')";
-        Statement st;
-        st=DbConnection.conMethod().createStatement();
-        st.executeQuery(sql);
-        
+        String sql="Insert into PATIENT(PATIENT_ID,ROOMNO,DEPARTMENT,FIRSTNAME,LASTNAME,DATEOFBIRTH,AGE,GENDER,CONTACT_NO,ADDRESS,BLOODGROUP,ID,DISEASE) values (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        PreparedStatement st=DbConnection.conMethod().prepareStatement(sql);
+         st.setString(1, patientId);
+       st.setString(2, roomNo);
+       st.setString(3,department);
+       st.setString(4, firstName);
+       st.setString(5, lastName);
+       st.setString(6, dateofBirth);
+       st.setString(7, age);
+       st.setString(8, gender);
+       st.setString(9, contactNo);
+       st.setString(10, address);
+       st.setString(11, bloodGroup);
+       st.setString(12, id);
+       st.setString(13, disease);
+       
+        st.executeUpdate();
     }
     
     

@@ -127,6 +127,7 @@
                 <li> <a href="UpdatePatient.xhtml">Update Patient</a></li>
                 <li> <a id="home" href="AddPatient.xhtml">Add Patient</a></li>
                 <li> <a href="DeletePatient.xhtml">Delete Patient</a></li>
+                  <li> <a href="index.xhtml">Logout</a></li>
                 
                </ul>
            </div>
@@ -135,7 +136,7 @@
                    <h:form>
                        <div class="label">
                         <div class="la">
-                            ID: <h:inputText value="#{addPatient.id}" />
+                            PatientID: <h:inputText value="#{addPatient.patientId}" />
                         </div>
                         <div class="la">
                             Room No: <h:inputText value="#{addPatient.roomNo}"/>
@@ -174,7 +175,7 @@
                             Blood Group: <h:inputText value="#{addPatient.bloodGroup}"/>
                         </div>
                         <div class="la">
-                            Concern Doctor: <h:inputText value="#{addPatient.concernDoctor}"/>
+                            ID: <h:inputText value="#{addPatient.id}"/>
                         </div>
                         <div class="la">
                             Disease: <h:inputText value="#{addPatient.disease}"/>

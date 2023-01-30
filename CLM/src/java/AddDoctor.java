@@ -1,4 +1,5 @@
 
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.faces.bean.ManagedBean;
@@ -137,12 +138,26 @@ public class AddDoctor {
 
     
       public void method() throws SQLException, ClassNotFoundException{
-        String sql="Insert into DOCTOR(ID,ROOMNO,DEPARTMENT,FIRSTNAME,LASTNAME,DATEOFBIRTH,AGE,GENDER,CONTACT_NO,ADDRESS,BLOODGROUP,EMAIL) values ('"+id+"','"+roomNo+"','"+department+"','"+firstName+"','"+lastName+"','"+dateofBirth+"','"+age+"','"+gender+"','"+contactNo+"','"+address+"','"+bloodGroup+"','"+email+"')";
+        String sql="Insert into DOCTOR(ID,ROOMNO,DEPARTMENT,FIRSTNAME,LASTNAME,DATEOFBIRTH,AGE,GENDER,CONTACT_NO,ADDRESS,BLOODGROUP,EMAIL) values (?,?,?,?,?,?,?,?,?,?,?,?)";
         String sql2="Insert into LOGIN(ID,PASSWORD,ROLE) values ('"+id+"','"+password+"','Doctor')";
-        Statement st;
-        st=DbConnection.conMethod().createStatement();
-        st.executeQuery(sql);
-        st.executeQuery(sql2);
+        PreparedStatement st=DbConnection.conMethod().prepareStatement(sql);
+        Statement st1=DbConnection.conMethod().createStatement();
+       // st=DbConnection.conMethod().createpreparedStatement();
+       st.setString(1, id);
+       st.setString(2, roomNo);
+       st.setString(3,department);
+       st.setString(4, firstName);
+       st.setString(5, lastName);
+       st.setString(6, dateofBirth);
+       st.setString(7, age);
+       st.setString(8, gender);
+       st.setString(9, contactNo);
+       st.setString(10, address);
+       st.setString(11, bloodGroup);
+       st.setString(12, email);
+       
+        st.executeUpdate();
+        st1.executeQuery(sql2);
         
     }
 

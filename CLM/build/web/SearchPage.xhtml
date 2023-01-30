@@ -122,6 +122,7 @@
                  <h3 class="logo">Vivo Clinic</h3>
                   <li>  <a href="DoctorPage.xhtml">View Patient</a></li>
                 <li> <a id="home" href="SearchPage.xhtml">Search Patient</a></li>
+                  <li> <a href="index.xhtml">Logout</a></li>
                 
                </ul>
            </div>
@@ -130,10 +131,10 @@
                    <h:form>
                        <div class="label">
                         <div class="la">
-                            ID: <h:inputText value="#{deletePatient.id}" />
+                            ID: <h:inputText value="#{searchP.patientId}" />
                         </div>
                                <div class= "link">
-                                   <h:commandButton class="Buttons"  value="SEARCH" action="#{deletePatient.method()}"/>    
+                                   <h:commandButton class="Buttons"  value="SEARCH" action="#{searchP.method()}"/>    
                            </div>
                        </div>
                        

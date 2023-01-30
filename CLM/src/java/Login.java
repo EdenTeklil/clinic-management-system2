@@ -46,14 +46,15 @@ public class Login {
         if(r1.next()){
             String role=r1.getString("ROLE");
             if("Doctor".equals(role)){
-                return "DoctorPage.xhtml";
+                return "SearchPage.xhtml";
             }
-            else{
+            else if("ADMIN".equals (role)) {
                 return "AdminPage.xhtml";
             }
             
+
         }
-        return "index.xhtml";
+       return "index.xhtml";
     }    
     
 }

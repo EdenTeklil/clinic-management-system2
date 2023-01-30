@@ -3,10 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/src/java/AddPatient.java</file>
-            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/web/index.xhtml</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/web/AdminPage.xhtml</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/src/java/ViewD.java</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/web/AddDoctor.xhtml</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/src/java/ViewP.java</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/src/java/AddDoctor.java</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/web/SearchPage.xhtml</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/web/ViewDoctor.xhtml</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/src/java/ViewDoctor.java</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/web/Service.xhtml</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/src/java/ViewPatient.java</file>
             <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/web/AddPatient.xhtml</file>
-            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/src/java/DbConnection.java</file>
+            <file>file:/C:/Users/a/Documents/NetBeansProjects/CLM/web/Login.xhtml</file>
         </group>
     </open-files>
 </project-private>

@@ -1,4 +1,5 @@
 
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.faces.bean.ManagedBean;
@@ -27,13 +28,21 @@ public class DeleteDoctor {
         this.id = id;
     }
      public void method() throws SQLException, ClassNotFoundException{
-        String sql="DELETE FROM DOCTOR WHERE id='"+id+"'";
-        String sql2="DELETE FROM LOGIN WHERE id='"+id+"'";
-
-        Statement st;
-        st=DbConnection.conMethod().createStatement();
-        st.executeQuery(sql);
-        st.executeQuery(sql2);
-
-}
+        String sql="DELETE FROM DOCTOR WHERE id=?";
+        String sql2="DELETE FROM LOGIN WHERE id=?";
+        PreparedStatement st=DbConnection.conMethod().prepareStatement(sql);
+        st.setString(1, id);
+        PreparedStatement st2=DbConnection.conMethod().prepareStatement(sql2);
+        st2.setString(1, id);
+        
+        st.executeUpdate();
+        st2.executeUpdate();
+        
+        Statement st1=DbConnection.conMethod().createStatement();
+       // st=DbConnection.conMethod().createpreparedStatement();
+       st.setString(1, id);
+       
+       
+  
+       }
 }

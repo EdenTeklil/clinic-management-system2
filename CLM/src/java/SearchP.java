@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -16,21 +17,32 @@ import javax.faces.bean.ManagedBean;
  * @author a
  */
 @ManagedBean
-public class ViewP {
+public class SearchP {
+      public List<SearchPatient> viewList;
+      String patientId;
+
+    public String getPatientId() {
+        return patientId;
+    }
+
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
+    }
     
-    
-    public List<ViewPatient> viewList;  
-public List<ViewPatient> getViewList() throws SQLException, ClassNotFoundException {    
+    public String method(){
+        return "DoctorPage.xhtml";
+    }
+public List<SearchPatient> getViewList() throws SQLException, ClassNotFoundException {    
 viewList = new ArrayList<>();   
- 
-    String sql="SELECT * FROM PATIENT";
+    
+    String sql="SELECT * FROM PATIENT WHERE PATIENT_ID = '"+ patientId +"'";
         Statement s5;
         
     
         s5 = DbConnection.conMethod().createStatement();
         ResultSet re = s5.executeQuery(sql);
         while (re.next()) {
-                         String ID = re.getString("PATIENT_ID");
+                         String PATIENT_ID = re.getString("PATIENT_ID");
                         String ROOMNO= re.getString("ROOMNO");
                         String DEPARTMENT = re.getString("DEPARTMENT");
                         String FIRSTNAME = re.getString("FIRSTNAME");
@@ -41,17 +53,18 @@ viewList = new ArrayList<>();
                         String CONTACT_NO = re.getString("CONTACT_NO");
                         String ADDRESS = re.getString("ADDRESS");
                         String BLOODGROUP = re.getString("BLOODGROUP");
-                        String CONCERNDOCTOR = re.getString("ID");
+                        String ID = re.getString("ID");
                         String DISEASE = re.getString("DISEASE");
-                   viewList.add(new ViewPatient(ID,ROOMNO,DEPARTMENT,FIRSTNAME,LASTNAME ,DATEOFBIRTH ,AGE,GENDER,CONTACT_NO,ADDRESS,BLOODGROUP,CONCERNDOCTOR, DISEASE));
-
-        }
                         
+                   viewList.add(new SearchPatient(PATIENT_ID,ROOMNO,DEPARTMENT,FIRSTNAME,LASTNAME ,DATEOFBIRTH ,AGE,GENDER,CONTACT_NO,ADDRESS,BLOODGROUP,ID,DISEASE));
+
+        }                        
+
                         
                     
          
       
 return viewList;  
-}    
+}
     
 }

@@ -5,7 +5,9 @@
      <h:head>
         <title>eden clinic</title>
         <style>
-            
+            body{
+                margin: 0;
+            }
             .bodys{
                 background-color: lightblue;
                 background-image: url("doco.jpg");
@@ -155,6 +157,7 @@
                 <li> <a  href="Doctors.xhtml">Doctors</a></li>
                 <li> <a href="About.xhtml">About</a></li>
                 <li> <a id="home" href="Login.xhtml">Login</a></li>
+                 <li> <a href="index.xhtml">Logout</a></li>
                </ul>
            
                 </div>
@@ -166,11 +169,11 @@
             <form><h:form>  
 
                 <p>Id</p>
-                 <h:inputText value="#{login.id}" />  
+                <h:inputText value="#{login.id}"  required="true" requiredMessage="id is required"/>  
                 
                 
                 <p>Password</p>
-                <h:inputSecret value="#{login.password}" />  
+                <h:inputSecret value="#{login.password}" required="true" requiredMessage="password is required" />  
                 <h:commandButton value="Login" action="#{login.method()}" />
                     
                 </h:form>     
